@@ -625,8 +625,12 @@ label.bar i:after {
   .skills .skill-session .php {
     margin-left: 14%;
   }
-  .works .portfolio {
-    width: 80%;
+  .works .collection {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .works .collection a {
+    width: 100%;
   }
   .service-cover .services .service {
     margin-bottom: 45px;
@@ -637,13 +641,6 @@ label.bar i:after {
   .service-cover .services .service .service-photo img {
     border-radius: 50%;
     width: 100%;
-  }
-  .collection {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .works .collection a {
-    width: 125%;
   }
 }
 
