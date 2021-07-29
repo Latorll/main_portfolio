@@ -307,15 +307,7 @@ img {
   opacity: 1;
 }
 
-.works .collection a .portfolio:hover .mask1 {
-  left: 0px;
-}
-
-.works .collection a .portfolio:hover .mask2 {
-  right: 0px;
-}
-
-.works .collection a .portfolio .mask1, .works .collection a .portfolio .mask2 {
+.works .collection a .portfolio:hover .mask1, .works .collection a .portfolio:hover .mask2 {
   width: 50%;
   height: 100%;
   position: absolute;
@@ -323,6 +315,14 @@ img {
   background-color: rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.works .collection a .portfolio:hover .mask1 {
+  left: 0px;
+}
+
+.works .collection a .portfolio:hover .mask2 {
+  right: 0px;
 }
 
 .works .collection a .portfolio .mask1 {
@@ -381,6 +381,100 @@ img {
   padding: 15px;
 }
 
+@media print, screen and (min-width: 768px) {
+  ._sp {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._pc {
+    display: block;
+  }
+}
+
+.skills .skill {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .skills .skill {
+    width: 43%;
+  }
+  .skills .skill + .skill {
+    margin-left: 14%;
+  }
+  .skills .skill:nth-child(3) {
+    margin-left: 0;
+  }
+  .skills .skill:nth-child(5) {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1001px) {
+  .skills .skill {
+    width: 24%;
+  }
+  .skills .skill + .skill {
+    margin-left: 14%;
+  }
+  .skills .skill:nth-child(4) {
+    margin-left: 0;
+  }
+  .margin {
+    width: 180px;
+  }
+  .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .services .service {
+    width: 33%;
+  }
+  .collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1000px) {
+  .works .collection {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .works .collection a {
+    width: 100%;
+  }
+  .works .collection a + a {
+    margin-top: 32px;
+  }
+  .service-cover .services .service {
+    margin-bottom: 45px;
+  }
+  .service-cover .services .service .service-photo {
+    width: 32%;
+  }
+}
+
+@media (max-width: 600px) {
+  .works .collection a .portfolio .caption {
+    font-size: 2.4vw;
+  }
+}
 .drawer-list {
   position: fixed;
   right: 0;
@@ -551,84 +645,5 @@ label.bar i:after {
   transition: transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: translate(-50%, 14px);
   transform: translate(-50%, 14px);
-}
-
-.skills .skill {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .skills .skill {
-    width: 43%;
-  }
-  .skills .skill + .skill {
-    margin-left: 14%;
-  }
-  .skills .skill:nth-child(3) {
-    margin-left: 0;
-  }
-  .skills .skill:nth-child(5) {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 1001px) {
-  .skills .skill {
-    width: 24%;
-  }
-  .skills .skill + .skill {
-    margin-left: 14%;
-  }
-  .skills .skill:nth-child(4) {
-    margin-left: 0;
-  }
-  .margin {
-    width: 180px;
-  }
-  .services {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .services .service {
-    width: 33%;
-  }
-  .collection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-  }
-}
-
-@media (max-width: 1000px) {
-  .works .collection {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .works .collection a {
-    width: 100%;
-  }
-  .works .collection a + a {
-    margin-top: 32px;
-  }
-  .service-cover .services .service {
-    margin-bottom: 45px;
-  }
-  .service-cover .services .service .service-photo {
-    width: 32%;
-  }
-}
-
-@media (max-width: 600px) {
-  .works .collection a .portfolio .caption {
-    font-size: 2.4vw;
-  }
 }
 /*# sourceMappingURL=l.css.map */
