@@ -3,6 +3,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  color: #fff;
 }
 
 img {
@@ -96,7 +97,7 @@ img {
 
 .drawer-list li a {
   text-decoration: none;
-  color: #FEFEFE;
+  color: #fff;
   text-align: center;
   width: 223px;
   margin-left: auto;
@@ -244,7 +245,6 @@ label.bar i:after {
   background-image: url(https://imatabi.jp/wp-content/uploads/2018/08/hosei.jpg);
   background-size: cover;
   padding-bottom: 85px;
-  color: white;
 }
 
 .about .me {
@@ -302,13 +302,14 @@ section.top {
   text-align: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-  animation: gradient 11s ease infinite;
+  -webkit-animation: gradient 11s ease infinite;
+          animation: gradient 11s ease infinite;
 }
 
 section.top h1 {
   font-size: 3.5vw;
   font-family: "Hiragino Mincho ProN", serif;
+  color: #000;
 }
 
 @-webkit-keyframes gradient {
@@ -411,7 +412,7 @@ section.top h1 {
   height: 98.5%;
   position: absolute;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -460,7 +461,7 @@ section.top h1 {
   padding-bottom: 99px;
   background-image: url(https://cdn-ak.f.st-hatena.com/images/fotolife/p/pcads_media/20210204/20210204114809.jpg);
   background-size: cover;
-  color: white;
+  color: #fff;
 }
 
 .skills .margin {
@@ -559,7 +560,7 @@ section.top h1 {
   background-size: cover;
   text-align: center;
   padding-bottom: 45px;
-  color: #FEFEFE;
+  color: #fff;
 }
 
 .service-cover .services {
@@ -647,16 +648,14 @@ section.top h1 {
 .contact .mail {
   display: inline-block;
   font-size: 35px;
-  color: black;
-  padding: 0 10px;
+  padding: 5px 11px 5px 11px;
   border-radius: 2px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .contact .mail:hover {
-  color: white;
-  background-color: orangered;
+  background-color: #e94408;
 }
 
 .contact footer {
