@@ -1,3 +1,73 @@
+* {
+  padding: 0px;
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.title {
+  font-size: 37px;
+  padding-top: 55px;
+  padding-bottom: 9px;
+}
+
+.title a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.title a:after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.title a:hover::after {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+img {
+  width: 100%;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transition-duration: 1000ms;
+  transition-duration: 1000ms;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+
+.scroll-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.blur {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+}
+
 .msg {
   height: 801px;
   display: -webkit-box;
@@ -309,92 +379,6 @@
   margin-top: 75px;
   text-align: center;
   padding: 15px;
-}
-
-* {
-  padding: 0px;
-  margin: 0;
-  font-family: "Hiragino Mincho ProN", serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.title {
-  font-size: 37px;
-  padding-top: 55px;
-  padding-bottom: 9px;
-}
-
-.title a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.title a:after {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #000;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transform-origin: center top;
-  transform-origin: center top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
-}
-
-.title a:hover::after {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-img {
-  width: 100%;
-}
-
-.fadein {
-  opacity: 0;
-  -webkit-transition-duration: 1000ms;
-  transition-duration: 1000ms;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transform: translate(0, 50px);
-  transform: translate(0, 50px);
-}
-
-.scroll-in {
-  opacity: 1;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-
-.blur {
-  -webkit-filter: blur(7px);
-  filter: blur(7px);
-}
-
-@media print, screen and (min-width: 768px) {
-  ._sp {
-    display: none;
-  }
-}
-
-._pc {
-  display: none;
-}
-
-@media print, screen and (min-width: 768px) {
-  ._pc {
-    display: block;
-  }
 }
 
 .drawer-list {
