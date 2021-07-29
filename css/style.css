@@ -340,7 +340,7 @@ section.top h1 {
   text-align: center;
   background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
   background-size: cover;
-  padding-bottom: 152px;
+  padding-bottom: 52px;
   color: #fff;
 }
 
@@ -662,5 +662,9 @@ section.top h1 {
   margin-top: 75px;
   text-align: center;
   padding: 15px;
+}
+
+.contact footer .copyright {
+  color: #000;
 }
 /*# sourceMappingURL=style.css.map */
