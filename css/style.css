@@ -1,8 +1,8 @@
 * {
   margin: 0;
-  font-family: "Hiragino Mincho ProN", serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 }
 
 img {
@@ -239,52 +239,6 @@ label.bar i:after {
   transform: translate(-50%, 14px);
 }
 
-section.top {
-  height: 801px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  -webkit-animation: gradient 15s ease infinite;
-  animation: gradient 11s ease infinite;
-}
-
-section.top h1 {
-  font-size: 3.5vw;
-}
-
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 .about {
   text-align: center;
   background-image: url(https://imatabi.jp/wp-content/uploads/2018/08/hosei.jpg);
@@ -334,6 +288,173 @@ section.top h1 {
   color: red;
 }
 
+section.top {
+  height: 801px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+  animation: gradient 11s ease infinite;
+}
+
+section.top h1 {
+  font-size: 3.5vw;
+  font-family: "Hiragino Mincho ProN", serif;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.works {
+  text-align: center;
+  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
+  background-size: cover;
+  padding-bottom: 152px;
+  color: #fff;
+}
+
+.works .collection {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 85%;
+  }
+}
+
+.works .collection a {
+  display: block;
+  width: 100%;
+}
+
+.works .collection a + a {
+  margin-top: 52px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection a {
+    width: 45%;
+  }
+  .works .collection a + a {
+    margin-top: 0;
+  }
+}
+
+.works .collection a .portfolio {
+  overflow: hidden;
+  position: relative;
+}
+
+.works .collection a .portfolio .image img {
+  height: 30%;
+}
+
+.works .collection a .portfolio:hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+}
+
+.works .collection a .portfolio:hover .caption p {
+  opacity: 1;
+}
+
+.works .collection a .portfolio:hover .mask1, .works .collection a .portfolio:hover .mask2 {
+  width: 50%;
+  height: 98.5%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.works .collection a .portfolio:hover .mask1 {
+  left: 0px;
+}
+
+.works .collection a .portfolio:hover .mask2 {
+  right: 0px;
+}
+
+.works .collection a .portfolio .mask1 {
+  left: -50%;
+}
+
+.works .collection a .portfolio .mask2 {
+  right: -50%;
+}
+
+.works .collection a .portfolio .caption {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.4s step-end;
+  transition: all 0.4s step-end;
+  font-size: 2.2vw;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection a .portfolio .caption {
+    font-size: 117%;
+  }
+}
+
+.works .collection a .portfolio .caption p {
+  color: #fff;
+  opacity: 0;
+}
+
 .skills {
   text-align: center;
   padding-bottom: 99px;
@@ -343,7 +464,13 @@ section.top h1 {
 }
 
 .skills .margin {
-  width: 90px;
+  width: 70px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skills .margin {
+    width: 200px;
+  }
 }
 
 .skills .skill-session {
@@ -365,18 +492,49 @@ section.top h1 {
 }
 
 .skills .skill-session .skill-list .inner {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 71%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skills .skill-session .skill-list .inner {
+    width: 81%;
+  }
 }
 
 .skills .skill-session .skill-list .inner .skill {
   margin-bottom: 25px;
+  width: 38%;
+}
+
+.skills .skill-session .skill-list .inner .skill + .skill {
+  margin-left: 24%;
+}
+
+.skills .skill-session .skill-list .inner .skill:nth-child(3) {
+  margin-left: 0;
+}
+
+.skills .skill-session .skill-list .inner .skill:nth-child(5) {
+  margin-left: 0;
+}
+
+@media print, screen and (min-width: 768px) {
+  .skills .skill-session .skill-list .inner .skill {
+    width: 24%;
+  }
+  .skills .skill-session .skill-list .inner .skill + .skill {
+    margin-left: 14%;
+  }
+  .skills .skill-session .skill-list .inner .skill:nth-child(4) {
+    margin-left: 0;
+  }
 }
 
 .skills .skill-session .skill-list .inner .skill p {
@@ -410,21 +568,55 @@ section.top h1 {
   margin-top: 15px;
 }
 
+@media print, screen and (min-width: 768px) {
+  .service-cover .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.service-cover .services .service {
+  margin-bottom: 33px;
+}
+
+.service-cover .services .service:nth-child(3) .service-explain {
+  position: relative;
+  top: 9.7px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .service-cover .services .service {
+    margin-bottom: 0;
+    width: 33%;
+  }
+}
+
 .service-cover .services .service .service-photo {
   margin: 0 auto;
-  width: 52%;
+  width: 32%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .service-cover .services .service .service-photo {
+    width: 52%;
+  }
 }
 
 .service-cover .services .service .service-photo img {
   border-radius: 50%;
 }
 
-.service-cover .services .service #title {
+.service-cover .services .service .service_title {
   margin-top: 24px;
-  font-size: 24px;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
 }
 
-.service-cover .services .service .service-explain {
+.service-cover .service-explain {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding-top: 20px;
@@ -432,7 +624,7 @@ section.top h1 {
   font-size: 18px;
 }
 
-.service-cover .services .service .service-explain p {
+.service-cover .service-explain p {
   margin: 0 auto;
   width: 95%;
 }
@@ -440,95 +632,6 @@ section.top h1 {
 .service-cover .estimate {
   padding-top: 45px;
   font-size: 18px;
-}
-
-.works {
-  text-align: center;
-  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
-  background-size: cover;
-  padding-bottom: 152px;
-  color: #fff;
-}
-
-.works .collection {
-  margin-top: 80px;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.works .collection a {
-  display: block;
-  width: 40%;
-}
-
-.works .collection a .portfolio {
-  overflow: hidden;
-  position: relative;
-}
-
-.works .collection a .portfolio .image img {
-  height: 30%;
-}
-
-.works .collection a .portfolio:hover .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: visible;
-}
-
-.works .collection a .portfolio:hover .caption p {
-  opacity: 1;
-}
-
-.works .collection a .portfolio:hover .mask1, .works .collection a .portfolio:hover .mask2 {
-  width: 50%;
-  height: 97.6%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.works .collection a .portfolio:hover .mask1 {
-  left: 0px;
-}
-
-.works .collection a .portfolio:hover .mask2 {
-  right: 0px;
-}
-
-.works .collection a .portfolio .mask1 {
-  left: -50%;
-}
-
-.works .collection a .portfolio .mask2 {
-  right: -50%;
-}
-
-.works .collection a .portfolio .caption {
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  font-size: 117%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.4s step-end;
-  transition: all 0.4s step-end;
-}
-
-.works .collection a .portfolio .caption p {
-  color: #fff;
-  opacity: 0;
 }
 
 .contact {
@@ -560,102 +663,5 @@ section.top h1 {
   margin-top: 75px;
   text-align: center;
   padding: 15px;
-}
-
-@media print, screen and (min-width: 768px) {
-  ._sp {
-    display: none;
-  }
-}
-
-._pc {
-  display: none;
-}
-
-@media print, screen and (min-width: 768px) {
-  ._pc {
-    display: block;
-  }
-}
-
-.skills .skill {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .skills .skill {
-    width: 43%;
-  }
-  .skills .skill + .skill {
-    margin-left: 14%;
-  }
-  .skills .skill:nth-child(3) {
-    margin-left: 0;
-  }
-  .skills .skill:nth-child(5) {
-    margin-left: 0;
-  }
-}
-
-@media (min-width: 1001px) {
-  .skills .skill {
-    width: 24%;
-  }
-  .skills .skill + .skill {
-    margin-left: 14%;
-  }
-  .skills .skill:nth-child(4) {
-    margin-left: 0;
-  }
-  .margin {
-    width: 180px;
-  }
-  .services {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-  .services .service {
-    width: 33%;
-  }
-  .collection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 230px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .works .collection {
-    width: 70%;
-    margin: 0 auto;
-  }
-  .works .collection a {
-    width: 100%;
-  }
-  .works .collection a + a {
-    margin-top: 32px;
-  }
-  .service-cover .services .service {
-    margin-bottom: 45px;
-  }
-  .service-cover .services .service .service-photo {
-    width: 32%;
-  }
-}
-
-@media (max-width: 600px) {
-  .works .collection a .portfolio .caption {
-    font-size: 2.4vw;
-  }
 }
 /*# sourceMappingURL=style.css.map */
