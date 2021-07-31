@@ -288,7 +288,7 @@ label.bar i:after {
   color: red;
 }
 
-section.top {
+.top {
   height: 801px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,7 +306,7 @@ section.top {
           animation: gradient 11s ease infinite;
 }
 
-section.top h1 {
+.top h1 {
   font-size: 3.5vw;
   font-family: "Hiragino Mincho ProN", serif;
   color: #000;
@@ -639,6 +639,7 @@ section.top h1 {
   background-image: url(https://www.knt.co.jp/holiday/images/zekkei_nature_mv.jpg);
   background-size: cover;
   text-align: center;
+  color: #000;
 }
 
 .contact .depend {
