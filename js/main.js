@@ -23,4 +23,7 @@ $(function(){
         const sector = $('body').children();
         $(sector).not('content').toggleClass('blur');
     });
+
+
+    $('body').children().css('background-position', 'center');
 });
