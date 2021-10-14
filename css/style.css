@@ -435,6 +435,7 @@ label.bar i::after {
 }
 
 .skills img {
+  width: 100%;
   margin-bottom: 10px;
 }
 
