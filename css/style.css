@@ -2,12 +2,27 @@
   margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
   color: #fff;
+}
+
+body {
+  font-family: 'Hiragino Mincho Pro',serif;
 }
 
 img {
   width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 91%;
+}
+
+@media print, screen and (min-width: 768px) {
+  .container {
+    width: 75%;
+  }
 }
 
 .title {
@@ -22,7 +37,42 @@ img {
   text-decoration: none;
 }
 
-.title a:after {
+.title a::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #000;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.title a:hover::after {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.title {
+  font-size: 2.3rem;
+  padding-top: 55px;
+  padding-bottom: 9px;
+}
+
+.title a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.title a::after {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -65,7 +115,7 @@ img {
 
 .blur {
   -webkit-filter: blur(7px);
-  filter: blur(7px);
+          filter: blur(7px);
 }
 
 .drawer-list {
@@ -75,24 +125,24 @@ img {
   height: 100vh;
   width: 100%;
   -webkit-transform: translate(100%);
-          transform: translate(100%);
+  transform: translate(100%);
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .drawer-list li {
   list-style: none;
   white-space: nowrap;
   -webkit-transform: translatex(100vw);
-          transform: translatex(100vw);
+  transform: translatex(100vw);
 }
 
 .drawer-list li a {
@@ -108,7 +158,7 @@ img {
   position: relative;
 }
 
-.drawer-list li a:after {
+.drawer-list li a::after {
   position: absolute;
   bottom: 29px;
   left: 19px;
@@ -175,14 +225,14 @@ input.bar:checked ~ label > i {
   background-color: transparent;
 }
 
-input.bar:checked ~ label > i:before {
+input.bar:checked ~ label > i::before {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
 }
 
-input.bar:checked ~ label > i:after {
+input.bar:checked ~ label > i::after {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-  transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 label.bar {
@@ -209,83 +259,28 @@ label.bar i {
   background-color: #fff;
 }
 
-label.bar i:before {
+label.bar i::before, label.bar i::after {
   position: absolute;
+  width: 100%;
+  height: 5px;
+  left: 50%;
+  background-color: #fff;
+  content: "";
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+label.bar i::before {
   top: 0;
-  width: 100%;
-  height: 5px;
-  left: 50%;
-  background-color: #fff;
-  content: "";
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  transition: transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: translate(-50%, -14px);
-  transform: translate(-50%, -14px);
+          transform: translate(-50%, -14px);
 }
 
-label.bar i:after {
-  position: absolute;
-  width: 100%;
-  height: 5px;
-  left: 50%;
-  background-color: #fff;
-  content: "";
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: -webkit-transform 0.35s;
-  transition: transform 0.35s;
-  transition: transform 0.35s, -webkit-transform 0.35s;
+label.bar i::after {
   -webkit-transform: translate(-50%, 14px);
-  transform: translate(-50%, 14px);
-}
-
-.about {
-  text-align: center;
-  background-image: url(https://imatabi.jp/wp-content/uploads/2018/08/hosei.jpg);
-  background-size: cover;
-  padding-bottom: 85px;
-}
-
-.about .me {
-  width: 23%;
-  margin-right: 38.5%;
-  margin-left: 38.5%;
-  margin-top: 24px;
-}
-
-.about img {
-  border-radius: 50%;
-}
-
-.about .sub_title {
-  font-size: 22px;
-  padding-top: 29px;
-  margin-bottom: 15px;
-}
-
-.about .explation {
-  width: 80%;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 1.26rem;
-}
-
-.about .explation p {
-  width: 90%;
-  opacity: 1;
-  margin: 0 auto;
-}
-
-.about .explation p .bold {
-  font-weight: bold;
-}
-
-.about .explation p .red {
-  color: red;
+          transform: translate(-50%, 14px);
 }
 
 .top {
@@ -294,11 +289,11 @@ label.bar i:after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
@@ -308,7 +303,6 @@ label.bar i:after {
 
 .top h1 {
   font-size: 3.5vw;
-  font-family: "Hiragino Mincho ProN", serif;
   color: #000;
 }
 
@@ -336,124 +330,50 @@ label.bar i:after {
   }
 }
 
-.works {
+.about {
   text-align: center;
-  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
+  background-image: url(https://imatabi.jp/wp-content/uploads/2018/08/hosei.jpg);
   background-size: cover;
-  padding-bottom: 52px;
-  color: #fff;
+  padding-bottom: 85px;
 }
 
-.works .collection {
-  margin-top: 80px;
+.about .me {
+  width: 255px;
   margin-left: auto;
   margin-right: auto;
-  width: 66%;
+  margin-top: 24px;
 }
 
-@media print, screen and (min-width: 768px) {
-  .works .collection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 85%;
-  }
+.about img {
+  border-radius: 50%;
 }
 
-.works .collection a {
-  display: block;
-  width: 100%;
+.about .sub_title {
+  font-size: 22px;
+  padding-top: 29px;
+  margin-bottom: 15px;
 }
 
-.works .collection a + a {
-  margin-top: 52px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .works .collection a {
-    width: 45%;
-  }
-  .works .collection a + a {
-    margin-top: 0;
-  }
-}
-
-.works .collection a .portfolio {
-  overflow: hidden;
-  position: relative;
-}
-
-.works .collection a .portfolio .image img {
-  height: 30%;
-}
-
-.works .collection a .portfolio:hover .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  visibility: visible;
-}
-
-.works .collection a .portfolio:hover .caption p {
-  opacity: 1;
-}
-
-.works .collection a .portfolio:hover .mask1, .works .collection a .portfolio:hover .mask2 {
-  width: 50%;
-  height: 98.5%;
-  position: absolute;
-  top: 0;
+.about .explation {
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.26rem;
 }
 
-.works .collection a .portfolio:hover .mask1 {
-  left: 0px;
+.about .explation p {
+  width: 90%;
+  opacity: 1;
+  margin: 0 auto;
 }
 
-.works .collection a .portfolio:hover .mask2 {
-  right: 0px;
+.about .explation p .bold {
+  font-weight: bold;
 }
 
-.works .collection a .portfolio .mask1 {
-  left: -50%;
-}
-
-.works .collection a .portfolio .mask2 {
-  right: -50%;
-}
-
-.works .collection a .portfolio .caption {
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.4s step-end;
-  transition: all 0.4s step-end;
-  font-size: 2.2vw;
-}
-
-@media print, screen and (min-width: 768px) {
-  .works .collection a .portfolio .caption {
-    font-size: 117%;
-  }
-}
-
-.works .collection a .portfolio .caption p {
-  color: #fff;
-  opacity: 0;
+.about .explation p .red {
+  color: red;
 }
 
 .skills {
@@ -464,95 +384,67 @@ label.bar i:after {
   color: #fff;
 }
 
-.skills .margin {
-  width: 70px;
+.skills .skill-session {
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding-top: 52px;
+  padding-bottom: 24px;
 }
 
-@media print, screen and (min-width: 768px) {
-  .skills .margin {
-    width: 200px;
+@media print, screen and (min-width: 544px) {
+  .skills .skill-session {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
-.skills .skill-session {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 25px;
-  font-size: 18px;
-}
-
-.skills .skill-session .skill-list {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding-top: 52px;
-  padding-bottom: 15px;
-  border-radius: 15px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.skills .skill-session .skill-list .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  width: 71%;
+.skills .skill {
+  margin-bottom: 29px;
+  width: 61%;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media print, screen and (min-width: 768px) {
-  .skills .skill-session .skill-list .inner {
-    width: 81%;
+@media print, screen and (min-width: 544px) {
+  .skills .skill {
+    width: 33%;
+    margin-right: 11%;
   }
-}
-
-.skills .skill-session .skill-list .inner .skill {
-  margin-bottom: 25px;
-  width: 38%;
-}
-
-.skills .skill-session .skill-list .inner .skill + .skill {
-  margin-left: 24%;
-}
-
-.skills .skill-session .skill-list .inner .skill:nth-child(3) {
-  margin-left: 0;
-}
-
-.skills .skill-session .skill-list .inner .skill:nth-child(5) {
-  margin-left: 0;
+  .skills .skill:nth-child(odd) {
+    margin-left: 11.5%;
+  }
 }
 
 @media print, screen and (min-width: 768px) {
-  .skills .skill-session .skill-list .inner .skill {
-    width: 24%;
+  .skills .skill {
+    width: 21%;
+    margin: 0;
+    margin-bottom: 24px;
+    margin-right: 8%;
   }
-  .skills .skill-session .skill-list .inner .skill + .skill {
-    margin-left: 14%;
-  }
-  .skills .skill-session .skill-list .inner .skill:nth-child(4) {
+  .skills .skill:nth-child(odd) {
     margin-left: 0;
   }
+  .skills .skill:first-child, .skills .skill:nth-child(4) {
+    margin-left: 10%;
+  }
 }
 
-.skills .skill-session .skill-list .inner .skill p {
-  text-align: center;
-}
-
-.skills .skill-session .skill-list .inner .skill img {
+.skills img {
   margin-bottom: 10px;
 }
 
-.skills .skill-session .skill-list .inner .skill img:hover {
+.skills img:hover {
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
+          transform: translateY(-5px);
   -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .service-cover {
@@ -564,8 +456,6 @@ label.bar i:after {
 }
 
 .service-cover .services {
-  width: 90%;
-  margin: 0 auto;
   margin-top: 15px;
 }
 
@@ -575,43 +465,31 @@ label.bar i:after {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.service-cover .services .service {
+.service-cover .service {
   margin-bottom: 33px;
 }
 
-.service-cover .services .service:nth-child(3) .service-explain {
-  position: relative;
-  top: 9.7px;
-}
-
 @media print, screen and (min-width: 768px) {
-  .service-cover .services .service {
-    margin-bottom: 0;
+  .service-cover .service {
     width: 33%;
   }
 }
 
-.service-cover .services .service .service-photo {
+.service-cover .service-photo {
   margin: 0 auto;
-  width: 32%;
+  width: 201px;
 }
 
-@media print, screen and (min-width: 768px) {
-  .service-cover .services .service .service-photo {
-    width: 52%;
-  }
-}
-
-.service-cover .services .service .service-photo img {
+.service-cover .service-photo img {
   border-radius: 50%;
 }
 
-.service-cover .services .service .service_title {
+.service-cover .service_title {
   margin-top: 24px;
   margin-bottom: 8px;
   font-size: 1.6rem;
@@ -635,9 +513,110 @@ label.bar i:after {
   font-size: 18px;
 }
 
+.works {
+  text-align: center;
+  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
+  background-size: cover;
+  padding-bottom: 52px;
+  color: #fff;
+}
+
+.works .collection {
+  margin-top: 80px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.works .collection a {
+  width: 45%;
+  margin-bottom: 33px;
+}
+
+.works .portfolio {
+  overflow: hidden;
+  position: relative;
+  margin-top: 52px;
+}
+
+.works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
+  width: 50%;
+  height: 98.5%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
+    height: 97.5%;
+  }
+}
+
+.works .portfolio:hover .mask1 {
+  left: 0px;
+}
+
+.works .portfolio:hover .mask2 {
+  right: 0px;
+}
+
+.works .portfolio:hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+}
+
+.works .portfolio:hover .caption p {
+  opacity: 1;
+}
+
+.works .mask1 {
+  left: -50%;
+}
+
+.works .mask2 {
+  right: -50%;
+}
+
+.works .caption {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.4s step-end;
+  transition: all 0.4s step-end;
+  font-size: 105%;
+}
+
+.works .caption p {
+  color: #fff;
+  opacity: 0;
+}
+
 .contact {
   background-image: url(https://www.knt.co.jp/holiday/images/zekkei_nature_mv.jpg);
   background-size: cover;
+  background-position: center;
   text-align: center;
   color: #000;
 }
@@ -663,9 +642,5 @@ label.bar i:after {
   margin-top: 75px;
   text-align: center;
   padding: 15px;
-}
-
-.contact footer .copyright {
-  color: #000;
 }
 /*# sourceMappingURL=style.css.map */
