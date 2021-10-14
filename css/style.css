@@ -464,17 +464,14 @@ label.bar i::after {
 
 .service-cover .services {
   margin-top: 15px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .service-cover .services {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .service-cover .service {
