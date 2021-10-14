@@ -549,18 +549,12 @@ label.bar i::after {
 
 .works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
   width: 50%;
-  height: 98.5%;
+  height: 97.5%;
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
-
-@media print, screen and (min-width: 768px) {
-  .works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
-    height: 97.5%;
-  }
 }
 
 .works .portfolio:hover .mask1 {
