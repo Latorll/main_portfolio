@@ -302,8 +302,14 @@ label.bar i::after {
 }
 
 .top h1 {
-  font-size: 3.5vw;
+  font-size: 1.5rem;
   color: #000;
+}
+
+@media print, screen and (min-width: 768px) {
+  .top h1 {
+    font-size: 3rem;
+  }
 }
 
 @-webkit-keyframes gradient {
@@ -623,10 +629,10 @@ label.bar i::after {
 .contact .mail {
   display: inline-block;
   font-size: 35px;
-  padding: 5px 11px 5px 11px;
-  border-radius: 2px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  padding: 1px 11px;
+  border-radius: 3px;
+  -webkit-transition: background-color .5s ease;
+  transition: background-color .5s ease;
 }
 
 .contact .mail:hover {
