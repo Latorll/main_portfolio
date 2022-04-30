@@ -1,12 +1,14 @@
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   color: #fff;
 }
 
 body {
   font-family: 'Hiragino Mincho Pro',serif;
+  overflow-x: hidden;
+  line-height: 1.5;
 }
 
 img {
@@ -29,38 +31,8 @@ img {
   font-size: 2.3rem;
   padding-top: 55px;
   padding-bottom: 9px;
-}
-
-.title a {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.title a::after {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: #000;
-  -webkit-transform: scale(0, 1);
-  transform: scale(0, 1);
-  -webkit-transform-origin: center top;
-  transform-origin: center top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
-}
-
-.title a:hover::after {
   -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-.title {
+          transform: scale(1, 1);
   font-size: 2.3rem;
   padding-top: 55px;
   padding-bottom: 9px;
@@ -83,34 +55,34 @@ img {
   -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
   -webkit-transform-origin: center top;
-  transform-origin: center top;
-  -webkit-transition: -webkit-transform .3s;
+          transform-origin: center top;
   transition: -webkit-transform .3s;
+  -webkit-transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
 }
 
 .title a:hover::after {
   -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
 .fadein {
   opacity: 0;
   -webkit-transition-duration: 1000ms;
-  transition-duration: 1000ms;
+          transition-duration: 1000ms;
   -webkit-transition-property: opacity, -webkit-transform;
   transition-property: opacity, -webkit-transform;
   transition-property: opacity, transform;
   transition-property: opacity, transform, -webkit-transform;
   -webkit-transform: translate(0, 50px);
-  transform: translate(0, 50px);
+          transform: translate(0, 50px);
 }
 
 .scroll-in {
   opacity: 1;
   -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .blur {
@@ -124,59 +96,57 @@ img {
   top: 0;
   height: 100vh;
   width: 100%;
-  -webkit-transform: translate(100%);
-  transform: translate(100%);
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .drawer-list li {
   list-style: none;
   white-space: nowrap;
   -webkit-transform: translatex(100vw);
-  transform: translatex(100vw);
+          transform: translatex(100vw);
 }
 
-.drawer-list li a {
+.drawer-list a {
   text-decoration: none;
   color: #fff;
   text-align: center;
-  width: 223px;
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  padding: 2rem;
+  display: inline-block;
+  padding: 2rem 0;
   font-size: 2.7rem;
   position: relative;
 }
 
-.drawer-list li a::after {
+.drawer-list a::after {
   position: absolute;
   bottom: 29px;
   left: 19px;
   content: '';
+  display: block;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #000;
-  -webkit-transform: scale(0, 2.5);
-  transform: scale(0, 2.5);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.menu:hover::after {
-  -webkit-transform: scale(0.9, 1.48);
-  transform: scale(0.9, 1.48);
+.drawer-list a:hover::after {
+  -webkit-transform: scale(1.2, 1);
+          transform: scale(1.2, 1);
 }
 
 input.bar {
@@ -185,12 +155,12 @@ input.bar {
 
 input.bar:checked ~ .drawer-list {
   -webkit-transform: translatex(0);
-  transform: translatex(0);
+          transform: translatex(0);
 }
 
 input.bar:checked ~ .drawer-list li {
   -webkit-transform: translatex(0);
-  transform: translatex(0);
+          transform: translatex(0);
 }
 
 input.bar:checked ~ .drawer-list li:nth-child(1) {
@@ -235,10 +205,9 @@ input.bar:checked ~ label > i::after {
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-label.bar {
+label {
   z-index: 4;
   position: relative;
-  display: block;
   height: 28.3px;
   width: 41px;
   position: fixed;
@@ -246,12 +215,12 @@ label.bar {
   right: 3%;
 }
 
-label.bar:hover {
+label:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
-label.bar i {
+label i {
   position: absolute;
   width: 100%;
   top: 50%;
@@ -259,26 +228,26 @@ label.bar i {
   background-color: #fff;
 }
 
-label.bar i::before, label.bar i::after {
+label i::before, label i::after {
+  content: "";
   position: absolute;
   width: 100%;
   height: 5px;
   left: 50%;
   background-color: #fff;
-  content: "";
   -webkit-transition: -webkit-transform 0.35s;
   transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
-label.bar i::before {
+label i::before {
   top: 0;
   -webkit-transform: translate(-50%, -14px);
           transform: translate(-50%, -14px);
 }
 
-label.bar i::after {
+label i::after {
   -webkit-transform: translate(-50%, 14px);
           transform: translate(-50%, 14px);
 }
@@ -289,16 +258,16 @@ label.bar i::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   -webkit-animation: gradient 11s ease infinite;
-  animation: gradient 11s ease infinite;
+          animation: gradient 11s ease infinite;
 }
 
 .top h1 {
@@ -341,6 +310,7 @@ label.bar i::after {
   background-image: url(https://imatabi.jp/wp-content/uploads/2018/08/hosei.jpg);
   background-size: cover;
   padding-bottom: 85px;
+  background-attachment: fixed;
 }
 
 .about .me {
@@ -374,12 +344,170 @@ label.bar i::after {
   margin: 0 auto;
 }
 
-.about .explation p .bold {
+.about .bold {
   font-weight: bold;
 }
 
-.about .explation p .red {
+.about .red {
   color: red;
+}
+
+.service-cover {
+  background-image: url(https://next.rikunabi.com/journal/wp-content/uploads/2018/03/20160302041704-2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+  padding-bottom: 45px;
+  color: #fff;
+}
+
+.service-cover .services {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-cover .service {
+  margin-bottom: 33px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .service-cover .service {
+    width: 33%;
+  }
+}
+
+.service-cover .service-photo {
+  margin: 0 auto;
+  width: 201px;
+}
+
+.service-cover img {
+  border-radius: 50%;
+}
+
+.service-cover .service_title {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+
+.service-cover .service-explain {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.service-cover .service-explain p {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.service-cover .estimate {
+  padding-top: 45px;
+  font-size: 18px;
+}
+
+.works {
+  text-align: center;
+  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
+  background-size: cover;
+  padding-bottom: 52px;
+  color: #fff;
+}
+
+.works .collection {
+  margin-top: 80px;
+}
+
+.works .collection a {
+  width: 45%;
+  margin-bottom: 33px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.works .portfolio {
+  overflow: hidden;
+  position: relative;
+  margin-top: 52px;
+}
+
+.works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
+  width: 50%;
+  height: 99.5%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.works .portfolio:hover .mask1 {
+  left: 0px;
+}
+
+.works .portfolio:hover .mask2 {
+  right: 0px;
+}
+
+.works .portfolio:hover .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: visible;
+}
+
+.works .portfolio:hover p {
+  opacity: 1;
+}
+
+.works .mask1 {
+  left: -50%;
+}
+
+.works .mask2 {
+  right: -50%;
+}
+
+.works .caption {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.4s step-end;
+  transition: all 0.4s step-end;
+  font-size: 105%;
+}
+
+.works .caption p {
+  color: #fff;
+  opacity: 0;
 }
 
 .skills {
@@ -420,9 +548,6 @@ label.bar i::after {
     width: 33%;
     margin-right: 11%;
   }
-  .skills .skill:nth-child(odd) {
-    margin-left: 11.5%;
-  }
 }
 
 @media print, screen and (min-width: 768px) {
@@ -432,10 +557,22 @@ label.bar i::after {
     margin-bottom: 24px;
     margin-right: 8%;
   }
+}
+
+@media print, screen and (min-width: 544px) {
+  .skills .skill:nth-child(odd) {
+    margin-left: 11.5%;
+  }
+}
+
+@media print, screen and (min-width: 768px) {
   .skills .skill:nth-child(odd) {
     margin-left: 0;
   }
-  .skills .skill:first-child, .skills .skill:nth-child(4) {
+}
+
+@media print, screen and (min-width: 768px) {
+  .skills .skill:nth-child(1), .skills .skill:nth-child(4) {
     margin-left: 10%;
   }
 }
@@ -450,169 +587,13 @@ label.bar i::after {
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.service-cover {
-  background-image: url(https://next.rikunabi.com/journal/wp-content/uploads/2018/03/20160302041704-2.jpg);
-  background-size: cover;
-  text-align: center;
-  padding-bottom: 45px;
-  color: #fff;
-}
-
-.service-cover .services {
-  margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.service-cover .service {
-  margin-bottom: 33px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .service-cover .service {
-    width: 33%;
-  }
-}
-
-.service-cover .service-photo {
-  margin: 0 auto;
-  width: 201px;
-}
-
-.service-cover .service-photo img {
-  border-radius: 50%;
-}
-
-.service-cover .service_title {
-  margin-top: 24px;
-  margin-bottom: 8px;
-  font-size: 1.6rem;
-}
-
-.service-cover .service-explain {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 18px;
-}
-
-.service-cover .service-explain p {
-  margin: 0 auto;
-  width: 95%;
-}
-
-.service-cover .estimate {
-  padding-top: 45px;
-  font-size: 18px;
-}
-
-.works {
-  text-align: center;
-  background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
-  background-size: cover;
-  padding-bottom: 52px;
-  color: #fff;
-}
-
-.works .collection {
-  margin-top: 80px;
-}
-
-@media print, screen and (min-width: 768px) {
-  .works .collection {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.works .collection a {
-  width: 45%;
-  margin-bottom: 33px;
-}
-
-.works .portfolio {
-  overflow: hidden;
-  position: relative;
-  margin-top: 52px;
-}
-
-.works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
-  width: 50%;
-  height: 97.5%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.works .portfolio:hover .mask1 {
-  left: 0px;
-}
-
-.works .portfolio:hover .mask2 {
-  right: 0px;
-}
-
-.works .portfolio:hover .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  visibility: visible;
-}
-
-.works .portfolio:hover .caption p {
-  opacity: 1;
-}
-
-.works .mask1 {
-  left: -50%;
-}
-
-.works .mask2 {
-  right: -50%;
-}
-
-.works .caption {
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.4s step-end;
-  transition: all 0.4s step-end;
-  font-size: 105%;
-}
-
-.works .caption p {
-  color: #fff;
-  opacity: 0;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
 }
 
 .contact {
   background-image: url(https://www.knt.co.jp/holiday/images/zekkei_nature_mv.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -621,6 +602,8 @@ label.bar i::after {
 
 .contact .depend {
   font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 45px;
 }
 
 .contact .mail {
@@ -633,12 +616,11 @@ label.bar i::after {
 }
 
 .contact .mail:hover {
-  background-color: #e94408;
+  background-color: #ef5f2b;
 }
 
 .contact footer {
-  margin-top: 75px;
+  margin-top: 55px;
   text-align: center;
   padding: 15px;
 }
-/*# sourceMappingURL=style.css.map */
