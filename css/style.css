@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #fff;
 }
 
@@ -35,8 +34,7 @@ img {
   font-size: 2.3rem;
   padding-top: 55px;
   padding-bottom: 9px;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
   font-size: 2.3rem;
   padding-top: 55px;
   padding-bottom: 9px;
@@ -56,42 +54,29 @@ img {
   width: 100%;
   height: 2px;
   background: #000;
-  -webkit-transform: scale(0, 1);
   transform: scale(0, 1);
-  -webkit-transform-origin: center top;
-          transform-origin: center top;
-  transition: -webkit-transform .3s;
-  -webkit-transition: -webkit-transform .3s;
+  transform-origin: center top;
   transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
 }
 
 .title a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .fadein {
   opacity: 0;
-  -webkit-transition-duration: 1000ms;
-          transition-duration: 1000ms;
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
+  transition-duration: 1000ms;
   transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
-  -webkit-transform: translate(0, 50px);
-          transform: translate(0, 50px);
+  transform: translate(0, 50px);
 }
 
 .scroll-in {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .blur {
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+    filter: blur(7px);
 }
 
 .drawer-list {
@@ -101,24 +86,16 @@ img {
   height: 100vh;
   width: 100%;
   z-index: 3;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translate(100%);
-          transform: translate(100%);
+  justify-content: center;
+  align-items: center;
+  transform: translate(100%);
 }
 
 .drawer-list li {
   list-style: none;
   white-space: nowrap;
-  -webkit-transform: translatex(100vw);
-          transform: translatex(100vw);
+  transform: translatex(100vw);
 }
 
 .drawer-list a {
@@ -142,17 +119,12 @@ img {
   width: 100%;
   height: 3px;
   background: #000;
-  -webkit-transform: scale(0, 0);
-          transform: scale(0, 0);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
+  transform: scale(0, 0);
   transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .drawer-list a:hover::after {
-  -webkit-transform: scale(1.2, 1);
-          transform: scale(1.2, 1);
+  transform: scale(1.2, 1);
 }
 
 input.bar {
@@ -160,41 +132,27 @@ input.bar {
 }
 
 input.bar:checked ~ .drawer-list {
-  -webkit-transform: translate(0);
-          transform: translate(0);
+  transform: translate(0);
 }
 
 input.bar:checked ~ .drawer-list li {
-  -webkit-transform: translatex(0);
-          transform: translatex(0);
+  transform: translatex(0);
 }
 
 input.bar:checked ~ .drawer-list li:nth-child(1) {
-  -webkit-transition: -webkit-transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: -webkit-transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
   transition: transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96), -webkit-transform 1s 0.08s cubic-bezier(0.29, 1.4, 0.44, 0.96);
 }
 
 input.bar:checked ~ .drawer-list li:nth-child(2) {
-  -webkit-transition: -webkit-transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: -webkit-transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
   transition: transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96), -webkit-transform 1s 0.16s cubic-bezier(0.29, 1.4, 0.44, 0.96);
 }
 
 input.bar:checked ~ .drawer-list li:nth-child(3) {
-  -webkit-transition: -webkit-transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: -webkit-transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
   transition: transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96), -webkit-transform 1s 0.24s cubic-bezier(0.29, 1.4, 0.44, 0.96);
 }
 
 input.bar:checked ~ .drawer-list li:nth-child(4) {
-  -webkit-transition: -webkit-transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: -webkit-transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
   transition: transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
-  transition: transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96), -webkit-transform 1s 0.32s cubic-bezier(0.29, 1.4, 0.44, 0.96);
 }
 
 input.bar:checked ~ label > i {
@@ -202,13 +160,11 @@ input.bar:checked ~ label > i {
 }
 
 input.bar:checked ~ label > i::before {
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 input.bar:checked ~ label > i::after {
-  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-          transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 label {
@@ -241,10 +197,7 @@ label i::before, label i::after {
   height: 5px;
   left: 50%;
   background-color: #fff;
-  -webkit-transition: -webkit-transform 0.35s;
-  transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
-  transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 label i::before {
