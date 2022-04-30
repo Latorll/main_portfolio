@@ -11,6 +11,10 @@ body {
   line-height: 1.5;
 }
 
+body * {
+  background-position: center;
+}
+
 img {
   width: 100%;
 }
@@ -106,6 +110,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
 }
 
 .drawer-list li {
@@ -154,8 +160,8 @@ input.bar {
 }
 
 input.bar:checked ~ .drawer-list {
-  -webkit-transform: translatex(0);
-          transform: translatex(0);
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 input.bar:checked ~ .drawer-list li {
@@ -624,3 +630,4 @@ label i::after {
   text-align: center;
   padding: 15px;
 }
+/*# sourceMappingURL=style.css.map */
