@@ -202,31 +202,22 @@ label i::before, label i::after {
 
 label i::before {
   top: 0;
-  -webkit-transform: translate(-50%, -14px);
-          transform: translate(-50%, -14px);
+  transform: translate(-50%, -14px);
 }
 
 label i::after {
-  -webkit-transform: translate(-50%, 14px);
-          transform: translate(-50%, 14px);
+  transform: translate(-50%, 14px);
 }
 
 .top {
   height: 801px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  -webkit-animation: gradient 11s ease infinite;
-          animation: gradient 11s ease infinite;
+  animation: gradient 11s ease infinite;
 }
 
 .top h1 {
@@ -322,14 +313,9 @@ label i::after {
 
 .service-cover .services {
   margin-top: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .service-cover .service {
@@ -394,12 +380,8 @@ label i::after {
 
 @media print, screen and (min-width: 768px) {
   .works .collection {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
 
@@ -415,7 +397,6 @@ label i::after {
   position: absolute;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
@@ -428,15 +409,9 @@ label i::after {
 }
 
 .works .portfolio:hover .caption {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   visibility: visible;
 }
 
@@ -459,7 +434,6 @@ label i::after {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.4s step-end;
   transition: all 0.4s step-end;
   font-size: 105%;
 }
@@ -487,11 +461,8 @@ label i::after {
 
 @media print, screen and (min-width: 544px) {
   .skills .skill-session {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -542,12 +513,9 @@ label i::after {
 }
 
 .skills img:hover {
-  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-transition-duration: .5s;
-          transition-duration: .5s;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  transition-duration: .5s;
 }
 
 .contact {
@@ -570,7 +538,6 @@ label i::after {
   font-size: 35px;
   padding: 1px 11px;
   border-radius: 3px;
-  -webkit-transition: background-color .5s ease;
   transition: background-color .5s ease;
 }
 
