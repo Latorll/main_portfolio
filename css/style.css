@@ -452,7 +452,6 @@ label i::after {
 .works .portfolio {
   overflow: hidden;
   position: relative;
-  margin-top: 52px;
 }
 
 .works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
