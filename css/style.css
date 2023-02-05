@@ -426,16 +426,24 @@ label i::after {
   text-align: center;
   background-image: url(https://i.gzn.jp/img/2015/07/16/smartphone-distract/00_m.jpg);
   background-size: cover;
-  padding-bottom: 52px;
+  padding-bottom: 95px;
+  padding-top: 33px;
 }
 
 .works .collection {
-  margin-top: 80px;
+  margin-top: 55px;
+  display: block;
+  width: 81%;
 }
 
 .works .collection a {
-  width: 45%;
-  margin-bottom: 33px;
+  display: block;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .collection a {
+    width: 45%;
+  }
 }
 
 @media print, screen and (min-width: 768px) {
@@ -452,6 +460,16 @@ label i::after {
 .works .portfolio {
   overflow: hidden;
   position: relative;
+}
+
+.works .portfolio:nth-child(n+1) {
+  margin-top: 80px;
+}
+
+@media print, screen and (min-width: 768px) {
+  .works .portfolio:nth-child(n+1) {
+    margin-top: 0;
+  }
 }
 
 .works .portfolio:hover .mask1, .works .portfolio:hover .mask2 {
@@ -504,7 +522,7 @@ label i::after {
   top: 0;
   -webkit-transition: all 0.4s step-end;
   transition: all 0.4s step-end;
-  font-size: 1vw;
+  font-size: 16px;
 }
 
 @media print, screen and (min-width: 768px) {
