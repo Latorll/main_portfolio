@@ -293,7 +293,8 @@ input.bar:checked ~ label > i {
   font-weight: 700;
   background: linear-gradient(-45deg, #fff, #868686, #000000);
   background-size: 750% auto;
-  
+  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: gradientEffect 12s infinite alternate;
           animation: gradientEffect 12s infinite alternate;
