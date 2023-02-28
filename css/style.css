@@ -236,8 +236,8 @@ label i, label i::before, label i::after {
   height: 5px;
   background-image: -webkit-gradient(linear, right top, left top, from(#FFF), to(#000));
   background-image: linear-gradient(-90deg, #FFF, #000);
-  -webkit-animation: gradient 40s infinite;
-          animation: gradient 40s infinite;
+  -webkit-animation: gradient 40s linear infinite;
+          animation: gradient 40s linear infinite;
   background-size: 600%;
 }
 
@@ -283,8 +283,8 @@ input.bar:checked ~ label > i {
   text-align: center;
   background-image: repeating-linear-gradient(-45deg, #000 3% 9%, #f00, #fe0, #0f0, #00f, #71eaff, #fff 14% 20%);
   background-size: 81111%;
-  -webkit-animation: gradient 400s infinite;
-          animation: gradient 400s infinite;
+  -webkit-animation: gradient 400s linear infinite;
+          animation: gradient 400s linear infinite;
 }
 
 .top h1 {
@@ -296,8 +296,8 @@ input.bar:checked ~ label > i {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: gradient 40s infinite;
-          animation: gradient 40s infinite;
+  -webkit-animation: gradient 40s linear infinite;
+          animation: gradient 40s linear infinite;
   text-align: center;
 }
 
