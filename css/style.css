@@ -236,8 +236,8 @@ label i, label i::before, label i::after {
   height: 5px;
   background-image: -webkit-gradient(linear, right top, left top, from(#FFF), to(#000));
   background-image: linear-gradient(-90deg, #FFF, #000);
-  -webkit-animation: gradient 30s linear infinite;
-          animation: gradient 30s linear infinite;
+  -webkit-animation: gradient 35s linear infinite;
+          animation: gradient 35s linear infinite;
   background-size: 600%;
 }
 
@@ -281,24 +281,23 @@ input.bar:checked ~ label > i {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background-image: repeating-linear-gradient(-45deg, #000 3% 9%, #f00, #fe0, #0f0, #00f, #71eaff, #fff 14% 20%);
-  background-size: 81111%;
-  -webkit-animation: gradient 250s linear infinite;
-          animation: gradient 250s linear infinite;
+  background: repeating-linear-gradient(135deg, #fff 0% 1%, #71eaff, #00f, #0f0, #ff0, #f00, #000 9% 10%);
+  background-size: 50000%;
+  -webkit-animation: gradient 350s linear normal infinite;
+          animation: gradient 350s linear normal infinite;
 }
 
 .top h1 {
   font-size: 2.5rem;
   color: #fff;
   font-weight: 800;
-  background: repeating-linear-gradient(-45deg, #fff, #000);
-  background-size: 5000% 5000%;
+  background: repeating-linear-gradient(135deg, #000, #fff);
+  background-size: 1500%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: gradient 30s linear infinite;
-          animation: gradient 30s linear infinite;
-  text-align: center;
+  -webkit-animation: gradient 35s linear normal infinite;
+          animation: gradient 35s linear normal infinite;
 }
 
 @media print, screen and (min-width: 768px) {
@@ -309,10 +308,7 @@ input.bar:checked ~ label > i {
 
 @-webkit-keyframes gradient {
   0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 50% 50%;
+    background-position: 0% 0%;
   }
   100% {
     background-position: 100% 100%;
@@ -321,10 +317,7 @@ input.bar:checked ~ label > i {
 
 @keyframes gradient {
   0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 50% 50%;
+    background-position: 0% 0%;
   }
   100% {
     background-position: 100% 100%;
